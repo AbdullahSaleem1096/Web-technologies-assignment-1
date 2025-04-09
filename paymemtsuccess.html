@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment Successful</title>
+  <link rel="stylesheet" href="paymentsuccess.css">
+</head>
+<body>
+
+  <div class="payment-container" id="paymentSuccess">
+    <!-- Filled dynamically by JS -->
+  </div>
+
+  <script>
+    // Dummy dynamic data (this can come from backend)
+    const paymentData = {
+      orderId: 'ORD-2025-0408',
+      paymentMethod: 'Credit Card (**** 4242)',
+      amountDue: '$89.99',
+      amountPaid: '$94.98',
+      deliveryEstimate: getDeliveryDate(5),
+      storeName: 'Nustify'
+    };
+
+    function getDeliveryDate(daysFromNow) {
+      const date = new Date();
+      date.setDate(date.getDate() + daysFromNow);
+      return date.toDateString();
+    }
+
+    const container = document.getElementById('paymentSuccess');
+    container.innerHTML = `
+      <div class="success-icon">&#10004;</div>
+      <h2>Payment Successful</h2>
+      <p class="message">Your payment has been processed and your order has been confirmed successfully.</p>
+
+      <div class="delivery-info">
+        <span class="icon">📦</span> Estimated Delivery: <strong>${paymentData.deliveryEstimate}</strong>
+      </div>
+
+      <div class="order-summary">
+        <div class="summary-row"><span>Order ID</span><span>#${paymentData.orderId}</span></div>
+        <div class="summary-row"><span>Payment Method</span><span>${paymentData.paymentMethod}</span></div>
+        <div class="summary-row"><span>Amount to be paid</span><span>${paymentData.amountDue}</span></div>
+        <div class="summary-row"><span>Amount paid</span><span>${paymentData.amountPaid}</span></div>
+      </div>
+
+      <div class="btn-group">
+        <button class="btn primary">Track Order</button>
+        <button class="btn" onclick="window.location.href='home.html'">Return to Home</button>
+      </div>
+
+      <div class="extra-links">
+        <a href="contact.html">Contact Support</a>
+        <span>•</span>
+        <a href="#">Download Receipt</a>
+      </div>
+
+      <p class="thanks">Thank you for shopping with ${paymentData.storeName}!</p>
+    `;
+  </script>
+
+</body>
+</html>

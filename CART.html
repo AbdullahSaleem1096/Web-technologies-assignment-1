@@ -32,162 +32,115 @@
       </script>
       
   </header>
-</body>
+</body> 
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fff;
-    }
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Cart Page</title>
+      <link rel="stylesheet" href="cart.css" />
+    </head>
+    <body>
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="home.html">Home</a> / <strong>Cart</strong>
+        </div>
+    
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Subtotal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="product">
+                <img src="monitor.png" alt="LCD Monitor">
+                <span>LCD Monitor</span>
+              </td>
+              <td>$650</td>
+              <td>
+                <select onchange="updateCart(this, 650)">
+                    <option>01</option>
+                    <option>02</option>
+                    <option>03</option>
+                  </select>
 
-    .container {
-      padding: 30px 40px;
-    }
+              </td>
+              <td>$650</td>
+            </tr>
+            <tr>
+              <td class="product">
+                <img src="gamepad.png" alt="Gamepad">
+                <span>H1 Gamepad</span>
+              </td>
+              <td>$550</td>
+              <td>
+                <select onchange="updateCart(this, 550)">
+                    <option>01</option>
+                    <option selected>02</option>
+                    <option>03</option>
+                </select>
 
-    .breadcrumb {
-      font-size: 0.9rem;
-      color: #666;
-      margin-bottom: 20px;
-    }
+              </td>
+              <td>$1100</td>
 
-    .breadcrumb a {
-      text-decoration: none;
-      color: #000;
-    }
+            </tr>
+          </tbody>
+          <script>
+            function updateCart(selectElement, unitPrice) {
+              const quantity = parseInt(selectElement.value);
+              const subtotalCell = selectElement.parentElement.nextElementSibling;
+              const newSubtotal = quantity * unitPrice;
+              subtotalCell.textContent = `$${newSubtotal}`;
+          
+              // Recalculate total
+              const subtotals = document.querySelectorAll('.cart-table tbody td:last-child');
+              let total = 0;
+              subtotals.forEach(cell => {
+                total += parseInt(cell.textContent.replace('$', ''));
+              });
+          
+              document.querySelector('.cart-total span').textContent = `$${total}`;
+              document.querySelector('.cart-total p strong + span').textContent = `$${total}`;
+            }
+          </script>
+          
+        </table>
+    
+        <div class="cart-actions">
+            <button class="btn btn-outline" onclick="window.location.href='home.html'">Return To Shop</button>
 
-    .contact-wrapper {
-      display: flex;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-
-    .contact-info, .contact-form {
-      background: #fff;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-      flex: 1 1 45%;
-    }
-
-    .contact-info h4 {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
-
-    .contact-info p, .contact-info a {
-      font-size: 0.95rem;
-      color: #333;
-      margin: 5px 0;
-    }
-
-    .form-group {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 15px;
-      flex-wrap: wrap;
-    }
-
-    .form-group input,
-    .form-group textarea {
-      flex: 1 1 30%;
-      padding: 10px;
-      font-size: 1rem;
-      border: 1px solid #eee;
-      border-radius: 5px;
-      background: #f5f5f5;
-    }
-
-    textarea {
-      width: 100%;
-      height: 180px;
-      padding: 10px;
-      font-size: 1rem;
-      resize: none;
-    }
-
-    .submit-btn {
-      background-color: #e53935;
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
-      cursor: pointer;
-      float: right;
-      margin-top: 10px;
-    }
-
-    .icon {
-      background-color: #e53935;
-      color: white;
-      padding: 10px;
-      border-radius: 50%;
-      font-size: 1rem;
-      display: inline-block;
-    }
-
-    @media (max-width: 768px) {
-      .form-group input,
-      .form-group textarea {
-        flex: 1 1 100%;
-      }
-
-      .contact-wrapper {
-        flex-direction: column;
-      }
-
-      .submit-btn {
-        width: 100%;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="breadcrumb">
-      <a href="#">Home</a> / <strong>Contact</strong>
-    </div>
-
-    <div class="contact-wrapper">
-      <!-- Contact Info -->
-      <div class="contact-info">
-        <h4><span class="icon">📞</span> Call To Us</h4>
-        <p>We are available 24/7, 7 days a week.</p>
-        <p>Phone: +8801611112222</p>
-        <hr />
-        <h4><span class="icon">✉️</span> Write To Us</h4>
-        <p>Fill out our form and we will contact you within 24 hours.</p>
-        <p>Emails: customer@exclusive.com</p>
-        <p>Emails: support@exclusive.com</p>
-      </div>
-
-      <!-- Contact Form -->
-      <div class="contact-form">
-        <form>
-          <div class="form-group">
-            <input type="text" placeholder="Your Name *" required />
-            <input type="email" placeholder="Your Email *" required />
-            <input type="tel" placeholder="Your Phone *" required />
+          <button class="btn btn-outline">Update Cart</button>
+        </div>
+    
+        <div class="bottom-section">
+          <div class="coupon-box">
+            <input type="text" placeholder="Coupon Code" />
+            <button class="btn btn-primary">Apply Coupon</button>
           </div>
-          <div class="form-group">
-            <textarea placeholder="Your Message" required></textarea>
+    
+          <div class="cart-total">
+            <h3>Cart Total</h3>
+            <p>Subtotal: <span>$1750</span></p>
+            <p>Shipping: <span>Free</span></p>
+            <hr />
+            <p><strong>Total:</strong> <span>$1750</span></p>
+            <button class="btn btn-primary btn-block" onclick="goToCheckout()">Proceed to Checkout</button>
+            <script>
+                function goToCheckout() {
+                  window.location.href = "payment.html";
+                }
+              </script>
+              
           </div>
-          <button type="submit" class="submit-btn">Send Message</button>
-        </form>
+        </div>
       </div>
-    </div>
-  </div>
-</body>
-
+    </body>
+    
 <!-- FOOTER -->
 <footer class="footer mt-5 py-4">
     <div class="container">
@@ -248,6 +201,4 @@
             </div>
         </div>
     </div>
-</footer>
-
-</html>
+</footer>  

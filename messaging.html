@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Support Chat</title>
+  <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+
+  <div class="chat-container">
+    <div class="chat-header">
+      <h2>Customer Support</h2>
+    </div>
+    <div class="chat-box" id="chatBox">
+      <div class="message agent">Hello! How can we help you today?</div>
+      <!-- Messages will be added dynamically -->
+    </div>
+    <div class="chat-input">
+      <input type="text" id="userInput" placeholder="Type your message...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script>
+    function sendMessage() {
+      const input = document.getElementById('userInput');
+      const chatBox = document.getElementById('chatBox');
+      const msg = input.value.trim();
+
+      if (msg) {
+        const userMsg = document.createElement('div');
+        userMsg.className = 'message user';
+        userMsg.textContent = msg;
+        chatBox.appendChild(userMsg);
+
+        input.value = '';
+        chatBox.scrollTop = chatBox.scrollHeight;
+
+        // Simulated reply
+        setTimeout(() => {
+          const agentMsg = document.createElement('div');
+          agentMsg.className = 'message agent';
+          agentMsg.textContent = "Thanks for your message. We'll get back to you shortly!";
+          chatBox.appendChild(agentMsg);
+          chatBox.scrollTop = chatBox.scrollHeight;
+        }, 1000);
+      }
+    }
+  </script>
+
+</body>
+</html>
