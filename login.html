@@ -60,17 +60,19 @@
                     <h3 class="fw-bold text-center">Log in</h3>
                     <p class="text-center text-muted">Enter your details below</p>
 
-                    <form>
+                    <form action="home.html" method="GET">
                         <div class="mb-3">
                             <label class="form-label">Email address</label>
-                            <input type="email" class="form-control">
+                            <input type="email" name="email" class="form-control" required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Password</label>
-                            <input type="password" class="form-control">
+                            <input type="password" name="password" class="form-control" required>
                         </div>
                         <button type="submit" class="btn btn-danger w-100">Log In</button>
-                        <p class="text-end mt-2"><a href="#" class="text-danger">Forget Password?</a></p>
+                        <p class="text-end mt-2">
+                            <a href="#" class="text-danger">Forget Password?</a>
+                        </p>
                     </form>
                 </div>
             </div>
