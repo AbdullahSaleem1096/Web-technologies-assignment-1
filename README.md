@@ -76,7 +76,7 @@ nustify/
     └── dashboard.html        # Admin monitoring panel
 
 
-# Why HostelHub?
+# Why Nustify?
 Solves real hostel-life challenges
 
 Encourages sustainability through reusability
@@ -105,4 +105,4 @@ Scalable foundation for future backend and database integration
 
 **Payment Gateway Integration**: Secure online transactions 
 _ _
-© 2025 HostelHub. Built with purpose for the student community.
+© 2025 Nustify. Built with purpose for the student community.
