@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <title>Nustify Header</title>
+  <link rel="stylesheet" href="paymentsuccess.css" />
+</head>
+<body>
+  <div class="top-bar"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#"><strong>Nustify</strong></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="signup.html">Sign Up</a></li>
+        </ul>
+      </div>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <hr> 
+<body>
+
+  <div class="payment-container" id="paymentSuccess">
+    <!-- Filled dynamically by JS -->
+  </div>
+
+  <script>
+    // Dummy dynamic data (this can come from backend)
+    const paymentData = {
+      orderId: 'ORD-2025-0408',
+      paymentMethod: 'Credit Card (**** 4242)',
+      amountDue: '$89.99',
+      amountPaid: '$94.98',
+      deliveryEstimate: getDeliveryDate(5),
+      storeName: 'Nustify'
+    };
+
+    function getDeliveryDate(daysFromNow) {
+      const date = new Date();
+      date.setDate(date.getDate() + daysFromNow);
+      return date.toDateString();
+    }
+
+    const container = document.getElementById('paymentSuccess');
+    container.innerHTML = `
+      <div class="success-icon">&#10004;</div>
+      <h2>Payment Successful</h2>
+      <p class="message">Your payment has been processed and your order has been confirmed successfully.</p>
+
+      <div class="delivery-info">
+        <span class="icon">📦</span> Estimated Delivery: <strong>${paymentData.deliveryEstimate}</strong>
+      </div>
+
+      <div class="order-summary">
+        <div class="summary-row"><span>Order ID</span><span>#${paymentData.orderId}</span></div>
+        <div class="summary-row"><span>Payment Method</span><span>${paymentData.paymentMethod}</span></div>
+        <div class="summary-row"><span>Amount to be paid</span><span>${paymentData.amountDue}</span></div>
+        <div class="summary-row"><span>Amount paid</span><span>${paymentData.amountPaid}</span></div>
+      </div>
+
+      <div class="btn-group">
+        <button class="btn primary">Track Order</button>
+        <button class="btn" onclick="window.location.href='home.html'">Return to Home</button>
+      </div>
+
+      <div class="extra-links">
+        <a href="contact.html">Contact Support</a>
+        <span>•</span>
+        <a href="#">Download Receipt</a>
+      </div>
+
+      <p class="thanks">Thank you for shopping with ${paymentData.storeName}!</p>
+    `;
+  </script>
+
+  <footer class="footer mt-5 py-4">
+    <div class="container">
+        <div class="row text-start">
+             
+            <!-- Section-1 -->
+            <div class="col-md-3">
+                <h5 class="fw-bold">Nustify</h5>
+                <p>Subscribe</p>
+                <p>Get 10% off your first order</p>
+                <input type="email" class="form-control mb-2" placeholder="Enter your email">
+            </div>
+
+            <!-- Section-2 -->
+            <div class="col-md-2">
+                <h5 class="fw-bold">Support</h5>
+                <p>National University of Science & Technology, Sector H-12, Islamabad.</p>
+                <p>Email: <a href="mailto:nustify@gmail.com" class="text-light text-decoration-none">nustify@gmail.com</a></p>
+                <p>Phone: +0000-0000-000</p>
+            </div>
+
+            <!-- Section-3 -->
+            <div class="col-md-2">
+                <h5 class="fw-bold">Account</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-light text-decoration-none">My Account</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Login / Register</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Cart</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Wishlist</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Shop</a></li>
+                </ul>
+            </div>
+
+            <!-- Section-4 -->
+            <div class="col-md-2">
+                <h5 class="fw-bold">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-light text-decoration-none">Privacy Policy</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Terms Of Use</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">FAQ</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Section-5 -->
+            <div class="col-md-3">
+                <h5 class="fw-bold">Download App</h5>
+                <p>Save $3 with App New User Only</p>
+                <div class="d-flex flex-column">
+                    <button class="mb-3 rounded"><i class="bi bi-google-play"></i>Google Play</button>
+                    <button class="mb-3 rounded"><i class="bi bi-apple"></i>App Store</button>
+                </div>
+                <div class="mt-3 d-flex justify-content-between">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

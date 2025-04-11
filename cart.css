@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  .breadcrumb {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .breadcrumb a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .cart-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    margin-bottom: 30px;
+  }
+  
+  .cart-table th, .cart-table td {
+    text-align: left;
+    padding: 15px;
+    background: #fff;
+    border-radius: 6px;
+  }
+  
+  .cart-table img {
+    width: 60px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  
+  .cart-table .product {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .cart-table select {
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .cart-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  .bottom-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+/* Default desktop style */
+.bottom-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.coupon-box {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex: 1;
+}
+
+.coupon-box input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.coupon-box button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.cart-total {
+  flex: 1;
+}
+
+/* Mobile view: adjust layout */
+@media (max-width: 768px) {
+  .bottom-section {
+    flex-direction: column;
+  }
+
+  .coupon-box {
+    order: 1;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+  }
+
+  .coupon-box input {
+    flex: 2;
+    font-size: 0.9rem;
+    padding: 0.4rem;
+  }
+
+  .coupon-box button {
+    flex: 1;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .cart-total {
+    order: 2;
+    margin-top: 1rem;
+  }
+
+  .cart-total button {
+    font-size: 1rem;
+    padding: 0.6rem;
+    width: 100%;
+  }
+}
+  /* Buttons */
+  button,
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .btn-primary {
+    background-color: #e53935;
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: #d32f2f;
+  }
+  
+  .btn-outline {
+    background-color: transparent;
+    border: 1px solid #aaa;
+    color: #333;
+  }
+  
+  .btn-outline:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .btn-block {
+    width: 100%;
+    text-align: center;
+  }
+  
