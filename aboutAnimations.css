@@ -1,0 +1,76 @@
+
+
+/*Will animate only jab we scroll*/
+.animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+  }
+  
+  .animate.visible {
+    opacity: 1;
+    transform: none;
+  }
+  
+  /* stats animation from below */
+  .stat {
+    opacity: 0;
+    transform: translateY(40px); 
+    transition: all 1s ease-in-out;
+  }
+  
+  .stat.visible {
+    transform: none;
+    opacity: 1;
+  }
+  
+ 
+  .stat h2 {
+    counter-reset: count 0;
+    animation: count-up 2.5s ease-out forwards;
+    display: inline-block;
+    position: relative;
+  }
+  
+  @keyframes count-up {
+    0% {
+      content: "0";
+    }
+    100% {
+    }
+  }
+  
+  /* team section animation */
+  .member {
+    opacity: 0;
+    transform: translateX(80px);
+    transition: all 0.8s ease;
+  }
+  
+  .member.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  /* story section */
+  .story {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+  }
+  
+  .story.visible {
+    opacity: 1;
+    transform: none;
+  }
+  
+  /* service boxes */
+  .service-box {
+    transform: scale(1);
+    transition: transform 0.3s ease;
+  }
+  
+  .service-box:hover {
+    transform: scale(1.03);
+  }
+  
