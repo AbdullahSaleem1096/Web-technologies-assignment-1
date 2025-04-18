@@ -142,21 +142,21 @@
       <h6 class="mb-3 fw-bold">Payment Options</h6>
     
       <div class="form-check d-flex align-items-center p-3 mb-2 border rounded" style="cursor: pointer;">
-        <input class="form-check-input ms-2 me-3" type="radio" name="payment" id="card" checked>
+        <input class="form-check-input ms-2 me-3" type="radio" name="payment" id="Credit Card" value="Credit Card" checked>
         <label class="form-check-label w-100" for="card">
           <i class="bi bi-credit-card-2-front me-1"></i> Credit/Debit Card
         </label>
       </div>
     
       <div class="form-check d-flex align-items-center p-3 mb-2 border rounded" style="cursor: pointer;">
-        <input class="form-check-input ms-2 me-3" type="radio" name="payment" id="wallet">
+        <input class="form-check-input ms-2 me-3" type="radio" name="payment" id="Digital Wallet" value="Digital Wallet">
         <label class="form-check-label w-100" for="wallet">
           <i class="bi bi-wallet2 me-1"></i> Digital Wallet
         </label>
       </div>
     
       <div class="form-check d-flex align-items-center p-3 border rounded" style="cursor: pointer;">
-        <input class="form-check-input ms-2 me-3" type="radio" name="payment" id="bank">
+        <input class="form-check-input ms-2 me-3" type="radio" name="payment" id="Bank Transfer" value="Bank Transfer">
         <label class="form-check-label w-100" for="bank">
           <i class="bi bi-bank me-1"></i> Bank Transfer
         </label>
@@ -168,25 +168,23 @@
         <h6 class="mb-3 fw-bold">Order Details</h6>
         <div class="order-detail-line">
           <span>Subtotal</span>
-          <span>Rs 1,299</span>
+          <span id="payment-subtotal-amount"></span>
         </div>
         <div class="order-detail-line">
           <span>Delivery</span>
-          <span>Rs 40</span>
+          <span id="payment-delivery-amount"></span>
         </div>
         <hr>
         <div class="order-detail-line total-line">
           <span>Total</span>
-          <span>Rs 1,428.90</span>
+          <span id="payment-total-amount"></span>
         </div>
       </div>
 
       <!-- Confirm Section -->
-      <div class="card-box">
+      <div class="card-box" id="proceed-to-payment-btn">
         <p class="secure-msg"><i class="bi bi-shield-check"></i> Secure Payment Processing</p>
-        <a href="paymemtsuccess.html">
-          <button class="btn confirm-btn">Confirm Payment</button>
-        </a>
+        <a href="paymentsuccess.html" class="btn confirm-btn">Confirm Payment</a>
       </div>
     </div>
 
@@ -254,4 +252,6 @@
     </div>
   </div>
 </footer>
-
+<script src="PaymentScript.js"></script> 
+</body>
+</html>
