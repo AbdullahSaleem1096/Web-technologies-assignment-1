@@ -1,28 +1,64 @@
-// // signUp.js
+const users = [
+    {
+        email: "maryam@gmail.com",
+        password: "maryam123" 
+    },
+    {
 
-// // Import the users array from user.js
-// import { users } from './user.js';
+        email: "fakiha@gmail.com",
+        password: "fakiha123"
+    },
+    {
 
-// // Function 
-// function signUp() {
-//   const username = document.getElementById('username').value;
-//   const email = document.getElementById('email').value;
-//   const password = document.getElementById('password').value;
+        email: "abdullah@gmail.com",
+        password: "abdullah123"
+    },
+    {
 
-//   // Check for existing username
-//   const userExists = users.some(user => user.username === username);
+        email: "ayesha@gmail.com",
+        password: "ayesha123"
+    },
+    {
 
-//   if (userExists) {
-//     // Redirect to login page if username already exists
-//     window.location.href = 'login.html';
-//   } else {
-//     // If username is unique, add the user to the "database"
-//     users.push({ username, email, password });
-//     alert('Sign-up successful!');
-//     // Redirect to login page after successful sign-up
-//     window.location.href = 'login.html';
-//   }
-// }
+        email: "adeenah@gmail.com",
+        password: "adeenah123"
+    },
+    {
+        email: "admin@gmail.com",
+        password: "admin123"
+    }
+];
 
-// //event listener to sign-up button
-// document.getElementById('signUpButton').addEventListener('click', signUp);
+document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver(
+    entries => {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.animationPlayState = "running";
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+        }
+        });
+    },
+    { threshold: 0.2 }
+    );
+    const animatedItems = document.querySelectorAll(".animated-section");
+    animatedItems.forEach(item => observer.observe(item));
+
+});
+
+
+function checkUser(){
+    var check = true;
+    const user_email = document.getElementById('sign-up-email').value;
+    for(let i=0;i<users.length;++i){
+        if(users[i].email === user_email){
+            alert('Email already exists. Try logging in instead.');
+            check = false;
+        }
+    }
+    if(check){
+        alert('You have successfully signed in')
+        window.location.href = "home.html";
+    }
+}
