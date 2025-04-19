@@ -33,12 +33,15 @@ body {
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
+  color: #000;
 }
 
 .category:hover {
   background-color: #ddd;
   transform: scale(1.05);
 }
+
+
 
 /* Products */
 .products {
@@ -64,6 +67,7 @@ body {
 .product h4 {
   margin: 10px 0 5px;
   font-size: 1rem;
+  color: #000
 }
 
 .price {
@@ -140,4 +144,32 @@ body {
     flex: 1 1 100%;
   }
 }
+
+.dark-theme {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-theme .navbar,
+.dark-theme footer {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.dark-theme a {
+  color: #f1f1f1;
+}
+
+#themeToggleBtn {
+  background-color: transparent;
+  border: 2px solid rgb(54, 54, 54);
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+#themeToggleBtn:hover {
+  background-color: orange;
+  color: white;
+}
+
 
