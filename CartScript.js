@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded',()=>{
     cartItemCollection.forEach(cartItem=>{
         const plusBtn = cartItem.querySelector('.cart-plus-btn');
         const minusBtn = cartItem.querySelector('.cart-minus-btn');
-        const removeBtn = cartItem.querySelector('.cart-remove-btn')
 
         plusBtn.addEventListener('click',()=>{
             const cartCount = cartItem.querySelector('.cart-item-count').textContent;
@@ -34,10 +33,6 @@ document.addEventListener('DOMContentLoaded',()=>{
                 cartItem.querySelector('.cart-item-count').textContent = count;
                 updateCartOrderSummary();
             }
-        })
-        removeBtn.addEventListener('click',()=>{
-            cartItem.remove();
-            updateCartOrderSummary();  
         })
     })
 })
