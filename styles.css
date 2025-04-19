@@ -149,7 +149,7 @@ body {
   }
 }
 
-<<<<<<< HEAD
+
 .dark-theme {
   background-color: #121212;
   color: white;
@@ -178,7 +178,7 @@ body {
 }
 
 
-=======
+
 /* Scrollup button */
 #scrollToTopBtn {
   position: fixed;
@@ -209,4 +209,3 @@ body {
 #scrollToTopBtn i {
   font-size: 18px;
 }
->>>>>>> 6868738353aa14e2c1e2186b5c6331e14ab1dbc7
