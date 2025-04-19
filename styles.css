@@ -12,11 +12,15 @@ body {
   background-color: black;
 }
 
-/* Navbar */
+ /* Navbar */
 .navbar {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensures it stays above other elements */
 }
+
 
 /* Categories */
 .categories {
@@ -145,6 +149,7 @@ body {
   }
 }
 
+<<<<<<< HEAD
 .dark-theme {
   background-color: #121212;
   color: white;
@@ -173,3 +178,35 @@ body {
 }
 
 
+=======
+/* Scrollup button */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  background-color: #cf8ee3;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#scrollToTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#scrollToTopBtn i {
+  font-size: 18px;
+}
+>>>>>>> 6868738353aa14e2c1e2186b5c6331e14ab1dbc7
