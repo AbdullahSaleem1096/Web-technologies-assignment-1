@@ -10,13 +10,13 @@ Nustify is a MERN-stack-inspired e-commerce web application designed to streamli
 
 The platform includes the following key components:
 
-**Landing Page**: Introduction to HostelHub and its core functionality
+**Landing Page**: Introduction to Nustify and its core functionality
 
 **Authentication**: Static login/signup for buyers and sellers
 
-**Dashboard**: View and manage product listings with filtering
+**Dashboard**: View and manage product listings with filtering engines
 
-**Cart & Checkout**: Simple purchase process using static HTML/CSS
+**Cart & Checkout**: Simple purchase process using JS functionalities
 
 **Admin Panel**: Overview of users, listings, and activities
 
@@ -24,18 +24,19 @@ The platform includes the following key components:
 
 ## Features
 
-# Core Functionalities (HTML/CSS only for assignment 1)
-**User Authentication**: Static role-based login system
+# Core Functionalities (using Javascript)
+
+**User Authentication**: Static role-based login  and signup system
 
 **Dual Sign-up Roles**: Register as buyer or seller 
 
+**Functionality**: Core functionality related to each button added using Javascript
+
 **Product Listings**: Add images, pricing, and hostel room data
 
-**Search & Filters**: Browse by hostel, category, and price
+**Search & Filters**: Browse by hostel, category, and price using JS search engines
 
-**Hostel Tagging**: Products mapped to specific hostels and rooms
-
-**Cart System**: Add to cart and proceed to static checkout
+**Cart System**: Add to cart and proceed to checkout
 
 **Comment System**: Buyers can leave inquiries or feedback
 
@@ -43,16 +44,18 @@ The platform includes the following key components:
 
 # User Experience
 
-**Static but Functional**: All data implemented with JSON files
+**Dynamic data processing**: All data implemented dynamically with JS files providing facilitation to the user
 
 **Responsive UI**: Built with HTML/CSS to adapt across devices
 
 **Figma Designs**: Crafted UI elements via Figma and Creatie.ai
 
+**Seamless Design**: Smooth and seamless web design based on user ease (dark/light mode , easy scroll-ups , etc)
+
 # Technology used
 
 **Frontend**	HTML, CSS
-**Backend** 	JavaScript (static)
+**Backend** 	JavaScript 
 **Database**	JSON Files
 **UI Design**	Figma, creatie.ai
 
@@ -61,7 +64,7 @@ The platform includes the following key components:
 nustify/
 ├── images/                   # Images and media files
 ├── css/
-│   └── style.css             # Global styling
+│   └── style.css             #  styling
 ├── index.html                # Landing page
 ├── login/
 │   ├── login.html
