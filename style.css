@@ -45,7 +45,7 @@ body {
     color: #aaa;
   }
   .breadcrumb-text span {
-    color: #000;
+    color: #c41f1f;
   }
   .sidebar h6 {
     font-weight: 600;
@@ -66,7 +66,15 @@ body {
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0,0,0,0.05);
+        color: #121212;
+
   }
+  h2{
+    color: black;
+  }
+h3{
+  color: #121212;
+}
   .form-section h4 {
     color: #e63946;
     font-weight: 600;
@@ -79,6 +87,8 @@ body {
   .form-label {
     font-weight: 500;
     font-size: 14px;
+    color: #121212;
+
   }
   .btn-cancel {
     background: none;
@@ -97,3 +107,32 @@ body {
     color: #e63946;
   }
 
+  .dark-theme {
+    background-color: #121212;
+    color: white;
+  }
+  
+  .dark-theme .navbar,
+  .dark-theme footer {
+    background-color: #1e1e1e;
+    color: white;
+  }
+  
+  .dark-theme a {
+    color: #f1f1f1;
+  }
+  
+  #themeToggleBtn {
+    background-color: transparent;
+    border: 2px solid rgb(54, 54, 54);
+    padding: 8px 12px;
+    border-radius: 8px;
+  }
+  
+  #themeToggleBtn:hover {
+    background-color: orange;
+    color: white;
+  }
+  
+  
+  
