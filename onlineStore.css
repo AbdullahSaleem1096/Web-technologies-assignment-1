@@ -225,3 +225,12 @@ h3{
 .dark-theme #nustify{
   color: #121212;
 }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #121212;
+}
+
+#collapseExample{
+  color: #121212;
+}
