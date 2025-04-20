@@ -48,3 +48,18 @@
     animation: fadeInUp 1s ease forwards;
   }
   
+  
+.dark-theme {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-theme .navbar,
+.dark-theme footer {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.dark-theme a {
+  color: #f1f1f1;
+}

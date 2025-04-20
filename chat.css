@@ -124,3 +124,33 @@ body {
     cursor: pointer;
   }
   
+
+  .dark-theme {
+    background-color: #121212;
+    color: white;
+  }
+  
+  .dark-theme .navbar,
+  .dark-theme footer {
+    background-color: #1e1e1e;
+    color: white;
+  }
+  
+  .dark-theme a {
+    color: #f1f1f1;
+  }
+  
+  #themeToggleBtn {
+    background-color: transparent;
+    border: 2px solid rgb(54, 54, 54);
+    padding: 8px 12px;
+    border-radius: 8px;
+  }
+  
+  #themeToggleBtn:hover {
+    background-color: orange;
+    color: white;
+  }
+  
+  
+  
