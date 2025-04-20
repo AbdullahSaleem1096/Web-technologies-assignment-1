@@ -111,43 +111,43 @@ const products = [
   },
   {
       id: 12,
-      name: "Smart Watch Elite",
+      name: "MiniFan",
       price: 289.99,
-      image: "watch.png",
-      description: "Advanced smartwatch with ECG, blood oxygen monitoring, and 7-day battery life. LTE connectivity included.",
+      image: "minifan.webp",
+      description: "Compact rechargeable minifan with adjustable speed settings. Sleek, portable design with quiet operation and USB compatibility.",
       rating: 4.7,
       reviews: 520,
-      category: "Wearables"
+      category: "Electronics"
   },
   {
     id: 13,
-    name: "Premium Speakers",
+    name: "Socks",
     price: 179.99,
-    image: "speakers.png",
-    description: "High-fidelity Bluetooth speakers with 40W output. Waterproof design with 15-hour playtime.",
+    image: "socks.webp",
+    description: "Ultra-soft cotton blend socks with reinforced heels and toes. Classic crew length with ribbed cuffs for a secure fit.",
     rating: 4.6,
     reviews: 320,
-    category: "Electronics"
+    category: "Wearables"
   },
   {
     id: 14,
-    name: "Tablet Pro Max",
+    name: "T-Shirt",
     price: 649.99,
-    image: "tab.png",
-    description: "10.5-inch tablet with 2K display and stylus support. 128GB storage with 10-hour battery life.",
+    image: "shirt.webp",
+    description: "Premium cotton t-shirt with a tailored fit. Breathable fabric and minimalist design for all-day comfort.",
     rating: 4.4,
     reviews: 195,
-    category: "Electronics" 
+    category: "Wearables" 
   },
   {
     id: 15,
-    name: "Premium Headphones",
+    name: "Slippers",
     price: 279.99,
-    image: "headphonespre.png",
-    description: "Studio-grade over-ear headphones with active noise cancellation. Hi-Res audio certified with luxury materials.",
+    image: "slippers.webp",
+    description: "Cozy indoor slippers with memory foam cushioning. Plush lining and anti-slip sole for comfort and stability.",
     rating: 4.9,
     reviews: 480,
-    category: "Electronics"
+    category: "Wearables"
   },
   {
     id: 16,
@@ -161,43 +161,43 @@ const products = [
   },
   {
     id: 17,
-    name: "Professional DSLR Camera",
+    name: "Laptop Bag",
     price: 999.99,
-    image: "dslr.png",
-    description: "24MP DSLR camera with 4K video recording. Includes 18-55mm lens and complete beginner photography kit.",
+    image: "laptopbag.webp",
+    description: "Durable and stylish laptop bag with padded compartments, water-resistant fabric, and multiple pockets for organized on-the-go protection.",
     rating: 4.5,
     reviews: 420,
-    category: "Electronics"
+    category: "Wearables"
 },
 {
     id: 18,
-    name: "Gaming Laptop Pro",
+    name: "Ring Light",
     price: 1299.99,
-    image: "laptop.png",
-    description: "High-performance gaming laptop with RTX 3060 GPU, 16GB RAM, and 1TB SSD. 144Hz refresh rate display.",
+    image: "ringlight.webp",
+    description: "Adjustable LED ring light with multiple brightness levels and color temperatures, perfect for flawless lighting in photos, videos, and live streams.",
     rating: 4.7,
     reviews: 380,
     category: "Electronics"
 },
 {
     id: 19,
-    name: "Wireless Gaming Headphones",
+    name: "Air Cooler",
     price: 104.99,
-    image: "headphones.png",
-    description: "Over-ear wireless headphones with 7.1 surround sound. 30-hour battery life with noise-canceling mic.",
+    image: "aircooler.webp",
+    description: "Powerful and energy-efficient air cooler with sleek design, honeycomb cooling pads, and multi-speed settings for all-day comfort.",
     rating: 4.3,
     reviews: 275,
     category: "Electronics"
 },
 {
     id: 20,
-    name: "Classic Leather Jacket",
+    name: "Gaming Smartphone",
     price: 249.00,
-    image: "jacket.png",
-    description: "Premium genuine leather jacket with quilted lining. Timeless biker-style design with multiple pockets.",
+    image: "gamingphone.jpeg",
+    description: "Sleek high-performance gaming smartphone with ultra-fast refresh rate, advanced cooling system, and bold RGB-lit design built for serious play.",
     rating: 4.8,
     reviews: 210,
-    category: "Fashion"
+    category: "Electronics"
 },
 ];
 function showMore() {
@@ -221,75 +221,29 @@ function showLess() {
 }
 
 
-// function makeProductItem(product) {
-//   const productItem = document.createElement('div');
-//   productItem.className = 'product';
-
-//   const link = document.createElement('a');
-//   link.href = `onlinestore.html`;
-
-//   const productImage = document.createElement('img');
-//   productImage.src = product.image;
-//   link.appendChild(productImage);
-  
-//   const productName = document.createElement('h4');
-//   productName.textContent = product.name;
-//   link.appendChild(productName);
-
-//   const productPrice = document.createElement('div');
-//   productPrice.textContent = product.price;
-//   productPrice.className = "product-price";
-//   link.appendChild(productPrice);
-
-//   productItem.appendChild(link);
-//   return productItem;
-// }
-
-
 function makeProductItem(product) {
   const productItem = document.createElement('div');
-  productItem.className = 'col';
-
-  const productCard = document.createElement('div');
-  productCard.className = "card h-100";
-
-  const productImage = document.createElement('img');
-  productImage.className = "card-img-top";
-  productImage.src = product.image;
-  productImage.alt = product.name;
-
-  const cardBody = document.createElement('div');
-  cardBody.className = "card-body";
-
-  const cardTitle = document.createElement('h5');
-  cardTitle.className = "card-title";
-  cardTitle.textContent = product.name;
-
-  const productReview = document.createElement('p');
-  productReview.className = "card-text text-warning";
-  productReview.textContent = `★★★★★ (${product.rating})`;
-
-  const productPrice = document.createElement('p');
-  productPrice.className = "card-text fw-bold text-danger";
-  productPrice.textContent = `Rs. ${product.price}`;
-
-  cardBody.appendChild(cardTitle);
-  cardBody.appendChild(productReview);
-  cardBody.appendChild(productPrice);
+  productItem.className = 'product';
 
   const link = document.createElement('a');
-  link.className = "stretched-link";
-  link.href = "onlinestore.html";
+  link.href = `onlinestore.html`;
 
-  productCard.appendChild(productImage);
-  productCard.appendChild(cardBody);
-  productCard.appendChild(link);
+  const productImage = document.createElement('img');
+  productImage.src = product.image;
+  link.appendChild(productImage);
+  
+  const productName = document.createElement('h4');
+  productName.textContent = product.name;
+  link.appendChild(productName);
 
-  productItem.appendChild(productCard);
+  const productPrice = document.createElement('div');
+  productPrice.textContent = product.price;
+  productPrice.className = "product-price";
+  link.appendChild(productPrice);
 
+  productItem.appendChild(link);
   return productItem;
 }
-
 
 document.addEventListener('DOMContentLoaded',displayProducts());
 
@@ -309,7 +263,6 @@ function displayProducts(){
     exploreContainer.appendChild(makeProductItem(product));
   });
 }
-
 
     
 const toggleBtn = document.getElementById("themeToggleBtn");
@@ -334,6 +287,7 @@ toggleBtn.addEventListener("click", () => {
     localStorage.setItem("theme", "light");
   }
 });
+
 
 // const products = [
 //     {
