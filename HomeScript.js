@@ -238,6 +238,7 @@ function makeProductItem(product) {
 
   const productPrice = document.createElement('div');
   productPrice.textContent = product.price;
+  productPrice.className = "product-price";
   link.appendChild(productPrice);
 
   productItem.appendChild(link);
@@ -262,6 +263,30 @@ function displayProducts(){
     exploreContainer.appendChild(makeProductItem(product));
   });
 }
+
+    
+const toggleBtn = document.getElementById("themeToggleBtn");
+const icon = toggleBtn.querySelector("i");
+const body = document.body;
+
+// Check and apply stored theme on load
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark-theme");
+  icon.classList.replace("fa-sun", "fa-moon");
+}
+
+toggleBtn.addEventListener("click", () => {
+  body.classList.toggle("dark-theme");
+
+  // Toggle icon
+  if (body.classList.contains("dark-theme")) {
+    icon.classList.replace("fa-sun", "fa-moon");
+    localStorage.setItem("theme", "dark");
+  } else {
+    icon.classList.replace("fa-moon", "fa-sun");
+    localStorage.setItem("theme", "light");
+  }
+});
 
 
 // const products = [

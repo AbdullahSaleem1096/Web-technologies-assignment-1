@@ -111,13 +111,20 @@ body {
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
+    color: black;
 }
 
 .category:hover {
     background-color: #ddd;
     transform: scale(1.05);
 }
+h4{
+  color:black
+}
 
+.product-price{
+  color:#121212;
+}
 
 /* Button Styles */
 .show-more-btn {
@@ -217,4 +224,45 @@ body {
 
 #scrollToTopBtn i {
   font-size: 18px;
+}
+
+
+
+.dark-theme {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-theme .navbar,
+.dark-theme footer {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.dark-theme a {
+  color: #f1f1f1;
+}
+
+#themeToggleBtn {
+  background-color: transparent;
+  border: 2px solid rgb(54, 54, 54);
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+#themeToggleBtn:hover {
+  background-color: orange;
+  color: white;
+}
+
+.dark-theme #best-selling-product-heading{
+  color:white;
+}
+
+.dark-theme #explore-our-product-heading{
+  color:white;
+}
+
+.dark-theme #nustify{
+  color:black;
 }

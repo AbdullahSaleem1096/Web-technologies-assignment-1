@@ -19,7 +19,7 @@
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#"><strong>Nustify</strong></a>
+      <a class="navbar-brand fw-bold" href="#"><strong id="nustify">Nustify</strong></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -62,34 +62,10 @@
       // Filter or redirect to that category page
     }
     
-    const toggleBtn = document.getElementById("themeToggleBtn");
-    const icon = toggleBtn.querySelector("i");
-    const body = document.body;
-  
-    // Check and apply stored theme on load
-    if (localStorage.getItem("theme") === "dark") {
-      body.classList.add("dark-theme");
-      icon.classList.replace("fa-sun", "fa-moon");
-    }
-  
-    toggleBtn.addEventListener("click", () => {
-      body.classList.toggle("dark-theme");
-  
-      // Toggle icon
-      if (body.classList.contains("dark-theme")) {
-        icon.classList.replace("fa-sun", "fa-moon");
-        localStorage.setItem("theme", "dark");
-      } else {
-        icon.classList.replace("fa-moon", "fa-sun");
-        localStorage.setItem("theme", "light");
-      }
-    });
-    
-
   </script>
 
   <!-- Best Selling Products -->
-<div>Best Selling Products</div>
+<div id="best-selling-product-heading">Best Selling Products</div>
 <div id="best-selling-product-section">
 
   <!-- <div class="product">
@@ -130,7 +106,7 @@
 </div>
 
 <!-- Explore Our Products -->
-<div>Explore Our Products</div>
+<div id="explore-our-product-heading">Explore Our Products</div>
 <div id="explore-our-product-section">
   <!-- Scroll to Top Button -->
 <!-- <button id="scrollToTopBtn"><i class="fa-solid fa-up-long"></i></button> -->
@@ -228,7 +204,7 @@
       <div class="col-md-2">
         <h5 class="fw-bold">Account</h5>
         <ul class="list-unstyled">
-          <li><a href="#" class="text-light text-decoration-none">My Account</a></li>
+          <li><a href="#" class="text-light text-decoration-none text-danger">My Account</a></li>
           <li><a href="#" class="text-light text-decoration-none">Login / Register</a></li>
           <li><a href="#" class="text-light text-decoration-none">Cart</a></li>
           <li><a href="#" class="text-light text-decoration-none">Wishlist</a></li>
