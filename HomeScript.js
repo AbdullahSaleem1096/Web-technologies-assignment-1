@@ -221,29 +221,75 @@ function showLess() {
 }
 
 
+// function makeProductItem(product) {
+//   const productItem = document.createElement('div');
+//   productItem.className = 'product';
+
+//   const link = document.createElement('a');
+//   link.href = `onlinestore.html`;
+
+//   const productImage = document.createElement('img');
+//   productImage.src = product.image;
+//   link.appendChild(productImage);
+  
+//   const productName = document.createElement('h4');
+//   productName.textContent = product.name;
+//   link.appendChild(productName);
+
+//   const productPrice = document.createElement('div');
+//   productPrice.textContent = product.price;
+//   productPrice.className = "product-price";
+//   link.appendChild(productPrice);
+
+//   productItem.appendChild(link);
+//   return productItem;
+// }
+
+
 function makeProductItem(product) {
   const productItem = document.createElement('div');
-  productItem.className = 'product';
+  productItem.className = 'col';
 
-  const link = document.createElement('a');
-  link.href = `onlinestore.html`;
+  const productCard = document.createElement('div');
+  productCard.className = "card h-100";
 
   const productImage = document.createElement('img');
+  productImage.className = "card-img-top";
   productImage.src = product.image;
-  link.appendChild(productImage);
-  
-  const productName = document.createElement('h4');
-  productName.textContent = product.name;
-  link.appendChild(productName);
+  productImage.alt = product.name;
 
-  const productPrice = document.createElement('div');
-  productPrice.textContent = product.price;
-  productPrice.className = "product-price";
-  link.appendChild(productPrice);
+  const cardBody = document.createElement('div');
+  cardBody.className = "card-body";
 
-  productItem.appendChild(link);
+  const cardTitle = document.createElement('h5');
+  cardTitle.className = "card-title";
+  cardTitle.textContent = product.name;
+
+  const productReview = document.createElement('p');
+  productReview.className = "card-text text-warning";
+  productReview.textContent = `★★★★★ (${product.rating})`;
+
+  const productPrice = document.createElement('p');
+  productPrice.className = "card-text fw-bold text-danger";
+  productPrice.textContent = `Rs. ${product.price}`;
+
+  cardBody.appendChild(cardTitle);
+  cardBody.appendChild(productReview);
+  cardBody.appendChild(productPrice);
+
+  const link = document.createElement('a');
+  link.className = "stretched-link";
+  link.href = "onlinestore.html";
+
+  productCard.appendChild(productImage);
+  productCard.appendChild(cardBody);
+  productCard.appendChild(link);
+
+  productItem.appendChild(productCard);
+
   return productItem;
 }
+
 
 document.addEventListener('DOMContentLoaded',displayProducts());
 
@@ -263,6 +309,7 @@ function displayProducts(){
     exploreContainer.appendChild(makeProductItem(product));
   });
 }
+
 
     
 const toggleBtn = document.getElementById("themeToggleBtn");
@@ -287,7 +334,6 @@ toggleBtn.addEventListener("click", () => {
     localStorage.setItem("theme", "light");
   }
 });
-
 
 // const products = [
 //     {
