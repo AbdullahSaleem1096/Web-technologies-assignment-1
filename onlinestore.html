@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="onlineStore.css">
     <link rel="stylesheet" href="onlinestoreAnimations.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
 
   </head>
   <body>
@@ -41,7 +44,7 @@
                     <i class="bi bi-person"></i>
                     </div>
                 </a>
-            </form>    
+            </form>
         </div>
         <button id="themeToggleBtn" class="btn btn-outline-dark">
           <i class="fa-solid fa-sun"></i>
@@ -77,14 +80,42 @@
   
 </script>
     <div class="container mt-3 d-flex justify-content-end">
-      <a href="messaging.html" class="btn btn-secondary">Go to Messaging</a>
+      <a href="messaging.html" class="btn btn-secondary">Go to Messaging</a>     
     </div>
 
     <!-- Product Section -->
 <div class="store my-5">
     <div class="product-section row g-4">
       <div class="col-md-6">
-        <img src="chair.png" class="product-image" alt="Product">
+
+
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="chair.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="chair1.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="chair2.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" id="one" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>  
+
+
+
+
+
+
       </div>
       <div class="product-attributes col-md-6">
         <h2 class="product-name fw-semibold" id="product-name-heading">Modern Comfort Armchair</h2>
@@ -97,11 +128,63 @@
           <span class="ms-2">(128 reviews)</span>
         </div>
         <h3 class="store-product-price fw-bold mt-3">$599.00</h3>
-        <p class="product-description mt-3" id="product-description">Free shipping on orders over $999. Experience unparalleled comfort with our Modern Comfort Armchair. Crafted with premium materials and designed for both style and functionality, this piece becomes the focal point of any room while providing exceptional comfort for daily use.</p>
+
+     
+<!-- 
+        <p class="d-block gap-1">
+        <button class="btn btn-dark px-4 py-2 mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          Product Description
+        </button>
+        </p>
+        
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body">
+            Free shipping on orders over $999. Experience unparalleled comfort  with our Modern Comfort Armchair. Crafted with premium materials and designed for both style and functionality,  this piece becomes the focal point of any room while providing exceptional comfort for daily use.
+          </div>
+        </div> -->
+        <p class="d-block gap-1">
+          <button id="toggleButton" class="btn btn-dark px-4 py-2 mt-3" type="button"
+            data-bs-toggle="collapse" 
+            data-bs-target="#collapseExample"
+            aria-expanded="false"
+            aria-controls="collapseExample">
+            Product Description
+            <span id="arrow" class="ms-2">&#9650;</span>
+          </button>
+        </p>
+        
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body">
+            Free shipping on orders over $999. Experience unparalleled comfort with our Modern Comfort Armchair. Crafted with premium materials and designed for both style and functionality,  this piece becomes the focal point of any room while providing exceptional comfort for daily use.
+          </div>
+        </div>
+        
+
+
         <button class="btn btn-dark px-4 py-2 mt-3">Add to Cart</button>
       </div>
     </div>
   
+
+
+      <script>
+
+        //for arrow
+        const collapseElement = document.getElementById('collapseExample');
+        const arrow = document.getElementById('arrow');
+      
+        collapseElement.addEventListener('show.bs.collapse', () => {
+          arrow.innerHTML = '&#9660;'; 
+        });
+      
+        collapseElement.addEventListener('hide.bs.collapse', () => {
+          arrow.innerHTML = '&#9650;';
+        });
+
+    
+      </script>
+      
+
     <!-- Customer Reviews -->
     <div class="review-section mt-5">
       <h4 class="H2 fw-bold mb-4">Customer Reviews</h4>
@@ -262,7 +345,9 @@
         </div>
     </div>
 </footer>
-    
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
@@ -285,6 +370,6 @@
         observer.observe(el);
       });
     </script>
-    
+
 </body>
 </html>

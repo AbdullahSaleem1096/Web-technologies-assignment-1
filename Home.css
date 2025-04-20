@@ -141,6 +141,7 @@ h4{
 
 .show-more-btn:hover {
     background-color: #ddd;
+    color: #000;
     transform: scale(1.05);
 }
 
@@ -159,6 +160,7 @@ h4{
 .show-less-btn:hover {
     background-color: #ddd;
     transform: scale(1.05);
+    color: #000;
 }
 
 .features {
