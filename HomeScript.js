@@ -110,47 +110,7 @@ const products = [
       category: "Electronics"
   },
   {
-      id: 12,
-      name: "MiniFan",
-      price: 289.99,
-      image: "minifan.webp",
-      description: "Compact rechargeable minifan with adjustable speed settings. Sleek, portable design with quiet operation and USB compatibility.",
-      rating: 4.7,
-      reviews: 520,
-      category: "Electronics"
-  },
-  {
-    id: 13,
-    name: "Socks",
-    price: 179.99,
-    image: "socks.webp",
-    description: "Ultra-soft cotton blend socks with reinforced heels and toes. Classic crew length with ribbed cuffs for a secure fit.",
-    rating: 4.6,
-    reviews: 320,
-    category: "Wearables"
-  },
-  {
-    id: 14,
-    name: "T-Shirt",
-    price: 649.99,
-    image: "shirt.webp",
-    description: "Premium cotton t-shirt with a tailored fit. Breathable fabric and minimalist design for all-day comfort.",
-    rating: 4.4,
-    reviews: 195,
-    category: "Wearables" 
-  },
-  {
-    id: 15,
-    name: "Slippers",
-    price: 279.99,
-    image: "slippers.webp",
-    description: "Cozy indoor slippers with memory foam cushioning. Plush lining and anti-slip sole for comfort and stability.",
-    rating: 4.9,
-    reviews: 480,
-    category: "Wearables"
-  },
-  {
-    id: 16,
+    id: 12,
     name: "Smart Watch Elite",
     price: 289.99,
     image: "watch.png",
@@ -160,45 +120,45 @@ const products = [
     category: "Wearables"
   },
   {
-    id: 17,
-    name: "Laptop Bag",
-    price: 999.99,
-    image: "laptopbag.webp",
-    description: "Durable and stylish laptop bag with padded compartments, water-resistant fabric, and multiple pockets for organized on-the-go protection.",
-    rating: 4.5,
-    reviews: 420,
-    category: "Wearables"
-},
-{
-    id: 18,
-    name: "Ring Light",
+    id: 13,
+    name: "Gaming Laptop Pro",
     price: 1299.99,
-    image: "ringlight.webp",
-    description: "Adjustable LED ring light with multiple brightness levels and color temperatures, perfect for flawless lighting in photos, videos, and live streams.",
+    image: "laptop.png",
+    description: "High-performance gaming laptop with RTX 3060 GPU, 16GB RAM, and 1TB SSD. 144Hz refresh rate display.",
     rating: 4.7,
     reviews: 380,
     category: "Electronics"
 },
 {
-    id: 19,
-    name: "Air Cooler",
-    price: 104.99,
-    image: "aircooler.webp",
-    description: "Powerful and energy-efficient air cooler with sleek design, honeycomb cooling pads, and multi-speed settings for all-day comfort.",
-    rating: 4.3,
-    reviews: 275,
-    category: "Electronics"
+  id: 14,
+  name: "Leather Tote Bag",
+  price: 89.99,
+  image: "leathertote.png",
+  description: "Genuine leather tote bag with multiple compartments. Spacious enough for daily essentials with a sleek professional look.",
+  rating: 4,
+  reviews: 142,
+  category: "Accessories"
 },
 {
-    id: 20,
-    name: "Gaming Smartphone",
-    price: 249.00,
-    image: "gamingphone.jpeg",
-    description: "Sleek high-performance gaming smartphone with ultra-fast refresh rate, advanced cooling system, and bold RGB-lit design built for serious play.",
-    rating: 4.8,
-    reviews: 210,
-    category: "Electronics"
+  id: 15,
+  name: "Cozy Pink Sweater",
+  price: 49.99,
+  image: "sweater.png",
+  description: "Soft and warm pink sweater made from premium cotton blend. Perfect for chilly days with a stylish oversized fit.",
+  rating: 4,
+  reviews: 300,
+  category: "Fashion"
 },
+{
+  id: 16,
+  name: "Classic Leather Jacket",
+  price: 249.00,
+  image: "jacket.png",
+  description: "Premium genuine leather jacket with quilted lining. Timeless biker-style design with multiple pockets.",
+  rating: 4.8,
+  reviews: 210,
+  category: "Fashion"
+}
 ];
 function showMore() {
   const exploreContainer = document.getElementById('explore-our-product-section');
