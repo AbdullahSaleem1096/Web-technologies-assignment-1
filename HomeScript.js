@@ -221,53 +221,6 @@ function showLess() {
 }
 
 
-
-// var isExpanded = false;
-// let extraProductElement = [];
-// function showMoreLess(){
-//   const exploreContainer = document.getElementById('explore-our-product-section');
-//   if(!isExpanded){
-//     const exploreProducts = products.slice(12);
-//     exploreProducts.forEach(product=>{
-//       exploreContainer.appendChild(makeProductItem(product));
-//       extraProductElement.push(product)
-//     })
-//     document.getElementById('show-more-less-btn').innerText = 'Show Less';
-//     isExpanded = true;
-//     console.log(extraProductElement);
-//   }
-//   else{
-//     extraProductElement.forEach(product=>{exploreContainer.removeChild(product)});
-//     extraProductElement = [];
-//     document.getElementById('show-more-less-btn').innerText = 'Show More';
-//     isExpanded = false;
-//   }
-// }
-
-
-// function showMoreLess(){
-//   const exploreContainer = document.getElementById('explore-our-product-section');
-//   if(!isExpanded){
-//     const exploreProducts = products.slice(12);
-//     exploreProducts.forEach(product=>{
-//       exploreContainer.appendChild(makeProductItem(product));
-//       extraProductElement.push(product)
-//     })
-//     document.getElementById('show-more-less-btn').innerText = 'Show Less';
-//     isExpanded = true;
-//     console.log(extraProductElement);
-//   }
-//   else{
-//     extraProductElement.forEach(product=>{exploreContainer.removeChild(product)});
-//     extraProductElement = [];
-//     document.getElementById('show-more-less-btn').innerText = 'Show More';
-//     isExpanded = false;
-//   }
-// }
-
-
-
-
 function makeProductItem(product) {
   const productItem = document.createElement('div');
   productItem.className = 'product';
